@@ -1,0 +1,69 @@
+<%= form_for(@car) do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mark %><br />
+    <%= f.text_field :mark %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnailurl %><br />
+    <%= f.text_field :thumbnailurl %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :cc %><br />
+    <%= f.number_field :cc %>
+  </div>
+  <div class="field">
+    <%= f.label :kmpassed %><br />
+    <%= f.number_field :kmpassed %>
+  </div>
+  <div class="field">
+    <%= f.label :automatic %><br />
+    <%= f.check_box :automatic %>
+  </div>
+  <div class="field">
+    <%= f.label :centerlock %><br />
+    <%= f.check_box :centerlock %>
+  </div>
+  <div class="field">
+    <%= f.label :powersteering %><br />
+    <%= f.check_box :powersteering %>
+  </div>
+  <div class="field">
+    <%= f.label :abs %><br />
+    <%= f.check_box :abs %>
+  </div>
+  <div class="field">
+    <%= f.label :electricwindow %><br />
+    <%= f.check_box :electricwindow %>
+  </div>
+  <div class="field">
+    <%= f.label :airbag %><br />
+    <%= f.check_box :airbag %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

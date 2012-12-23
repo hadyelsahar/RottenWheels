@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mark: MyString
+  model: MyString
+  thumbnailurl: MyString
+  picture: 
+  comment: MyText
+  cc: 1
+  kmpassed: 1
+  automatic: false
+  centerlock: false
+  powersteering: false
+  abs: false
+  electricwindow: false
+  airbag: false
+
+two:
+  mark: MyString
+  model: MyString
+  thumbnailurl: MyString
+  picture: 
+  comment: MyText
+  cc: 1
+  kmpassed: 1
+  automatic: false
+  centerlock: false
+  powersteering: false
+  abs: false
+  electricwindow: false
+  airbag: false
