@@ -4,7 +4,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :mark
       t.string :model
       t.string :thumbnailurl
-      t.url :picture
+      t.string :picture
       t.text :comment
       t.integer :cc
       t.integer :kmpassed

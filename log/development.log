@@ -1,0 +1,537 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (57.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (17.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCars (20121223012544)
+
+
+Started GET "/cars" for 127.0.0.1 at 2012-12-23 03:52:11 +0200
+  Processing by CarsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'cars'):
+  app/controllers/cars_controller.rb:5:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 03:52:26 +0200
+  Processing by CarsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'cars'):
+  app/controllers/cars_controller.rb:27:in `new'
+  app/controllers/cars_controller.rb:27:in `new'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-23 03:52:30 +0200
+  Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCars (20121223012544)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCars (20121223012544)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mark" varchar(255), "model" varchar(255), "thumbnailurl" varchar(255), "picture" varchar(255), "comment" text, "cc" integer, "kmpassed" integer, "automatic" boolean, "centerlock" boolean, "powersteering" boolean, "abs" boolean, "electricwindow" boolean, "airbag" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121223012544')
+Migrating to CreateUsers (20121223014254)
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255), "lastname" varchar(255), "email" varchar(255), "mobile" varchar(255), "location" varchar(255), "pricture" varchar(255), "thumbnail" varchar(255), "authority" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121223014254')
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("cars")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/users" for 127.0.0.1 at 2012-12-23 03:55:23 +0200
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (36.9ms)
+Compiled application.css  (2ms)  (pid 3783)
+Compiled cars.css  (15ms)  (pid 3783)
+Compiled scaffolds.css  (26ms)  (pid 3783)
+Compiled users.css  (1ms)  (pid 3783)
+Compiled application.js  (11ms)  (pid 3783)
+Compiled jquery.js  (152ms)  (pid 3783)
+Compiled jquery_ujs.js  (43ms)  (pid 3783)
+Compiled cars.js  (737ms)  (pid 3783)
+Compiled users.js  (227ms)  (pid 3783)
+Completed 200 OK in 1486ms (Views: 1484.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /application.css - 304 Not Modified (56ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /users.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /cars.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /cars.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /users.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:26 +0200
+Served asset /application.js - 200 OK (31ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (31.6ms)
+Rendered users/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 107ms (Views: 105.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /cars.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 03:55:29 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+  Processing by CarsController#new as HTML
+Rendered cars/_form.html.erb (36.4ms)
+Rendered cars/new.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 03:59:08 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 04:40:38 +0200
+  Processing by CarsController#new as HTML
+Rendered cars/_form.html.erb (25.5ms)
+Rendered cars/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 04:40:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:25 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+  Processing by CarsController#new as HTML
+Rendered cars/_form.html.erb (25.0ms)
+Rendered cars/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:07:30 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zb+75dL+JXx0gGcWQfRXnXeKVC8uIUYzZIqhV3kohS0=", "car"=>{"mark"=>"mercides", "model"=>"s300", "thumbnailurl"=>"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPq73e-kG2bQVIQ7gODy5Z5qIeEFMBZ_7LInkbENq3WyGM8xwa", "picture"=>"http://swotti.starmedia.com/tmp/swotti/cacheBWVYY2VKZXMGCY1JBGFZCW==/imgMercedes%20S-class7.jpg", "comment"=>"", "cc"=>"3000", "kmpassed"=>"45000", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"1", "electricwindow"=>"1", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[36mSQL (22.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "thumbnailurl", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 3000], ["centerlock", true], ["comment", ""], ["created_at", Sun, 23 Dec 2012 04:08:56 UTC +00:00], ["electricwindow", true], ["kmpassed", 45000], ["mark", "mercides"], ["model", "s300"], ["picture", "http://swotti.starmedia.com/tmp/swotti/cacheBWVYY2VKZXMGCY1JBGFZCW==/imgMercedes%20S-class7.jpg"], ["powersteering", true], ["thumbnailurl", "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPq73e-kG2bQVIQ7gODy5Z5qIeEFMBZ_7LInkbENq3WyGM8xwa"], ["updated_at", Sun, 23 Dec 2012 04:08:56 UTC +00:00]]
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 77ms
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered cars/show.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 90ms (Views: 82.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /cars.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:08:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (0.5ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 38ms (Views: 30.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /cars.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:02 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+  Processing by CarsController#new as HTML
+Rendered cars/_form.html.erb (28.9ms)
+Rendered cars/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+  Processing by CarsController#new as HTML
+Rendered cars/_form.html.erb (27.5ms)
+Rendered cars/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:09:34 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/" for 127.0.0.1 at 2012-12-23 06:17:35 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /application.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-23 06:17:36 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
