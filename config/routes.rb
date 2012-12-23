@@ -1,4 +1,6 @@
 RottenWheels::Application.routes.draw do
+  resources :users
+
   resources :cars
 
   # The priority is based upon order of creation:
