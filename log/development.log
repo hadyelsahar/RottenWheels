@@ -2858,3 +2858,763 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 00:08:14 +0200
 Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2012-12-24 01:07:38 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (1.6ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (327.9ms)
+Completed 200 OK in 343ms (Views: 335.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:07:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (452.0ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (41.8ms)[0m  [1mDELETE FROM "cars"[0m
+  [1m[35mSQL (23.9ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Jackson"], ["lastname", "Custodio"], ["location", "cairo"], ["mobile", "01220185311"], ["pricture", "https://graph.facebook.com/1489686794/picture"], ["thumbnail", "https://graph.facebook.com/1489686794/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Joelle"], ["lastname", "Gowans"], ["location", "cairo"], ["mobile", "01220185312"], ["pricture", "https://graph.facebook.com/1489686894/picture"], ["thumbnail", "https://graph.facebook.com/1489686894/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Felipe"], ["lastname", "Garon"], ["location", "cairo"], ["mobile", "01220185313"], ["pricture", "https://graph.facebook.com/1489686994/picture"], ["thumbnail", "https://graph.facebook.com/1489686994/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Tabatha"], ["lastname", "Halpern"], ["location", "cairo"], ["mobile", "01220185314"], ["pricture", "https://graph.facebook.com/1489687094/picture"], ["thumbnail", "https://graph.facebook.com/1489687094/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Kendall"], ["lastname", "Keppler"], ["location", "cairo"], ["mobile", "01220185315"], ["pricture", "https://graph.facebook.com/1489687194/picture"], ["thumbnail", "https://graph.facebook.com/1489687194/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Elisabeth"], ["lastname", "Napoles"], ["location", "cairo"], ["mobile", "01220185316"], ["pricture", "https://graph.facebook.com/1489687294/picture"], ["thumbnail", "https://graph.facebook.com/1489687294/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Otelia"], ["lastname", "Mcglone"], ["location", "cairo"], ["mobile", "01220185317"], ["pricture", "https://graph.facebook.com/1489687394/picture"], ["thumbnail", "https://graph.facebook.com/1489687394/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Pura"], ["lastname", "Groh"], ["location", "cairo"], ["mobile", "01220185318"], ["pricture", "https://graph.facebook.com/1489687494/picture"], ["thumbnail", "https://graph.facebook.com/1489687494/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Helene"], ["lastname", "Troxel"], ["location", "cairo"], ["mobile", "01220185319"], ["pricture", "https://graph.facebook.com/1489687594/picture"], ["thumbnail", "https://graph.facebook.com/1489687594/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Reagan"], ["lastname", "Markell"], ["location", "cairo"], ["mobile", "01220185320"], ["pricture", "https://graph.facebook.com/1489687694/picture"], ["thumbnail", "https://graph.facebook.com/1489687694/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Lulu"], ["lastname", "Balentine"], ["location", "cairo"], ["mobile", "01220185321"], ["pricture", "https://graph.facebook.com/1489687794/picture"], ["thumbnail", "https://graph.facebook.com/1489687794/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Waneta"], ["lastname", "Glass"], ["location", "cairo"], ["mobile", "01220185322"], ["pricture", "https://graph.facebook.com/1489687894/picture"], ["thumbnail", "https://graph.facebook.com/1489687894/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Aide"], ["lastname", "Sing"], ["location", "cairo"], ["mobile", "01220185323"], ["pricture", "https://graph.facebook.com/1489687994/picture"], ["thumbnail", "https://graph.facebook.com/1489687994/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Pearle"], ["lastname", "Goers"], ["location", "cairo"], ["mobile", "01220185324"], ["pricture", "https://graph.facebook.com/1489688094/picture"], ["thumbnail", "https://graph.facebook.com/1489688094/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Chante"], ["lastname", "Bacon"], ["location", "cairo"], ["mobile", "01220185325"], ["pricture", "https://graph.facebook.com/1489688194/picture"], ["thumbnail", "https://graph.facebook.com/1489688194/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Krystin"], ["lastname", "Muir"], ["location", "cairo"], ["mobile", "01220185326"], ["pricture", "https://graph.facebook.com/1489688294/picture"], ["thumbnail", "https://graph.facebook.com/1489688294/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Kimberley"], ["lastname", "Gulick"], ["location", "cairo"], ["mobile", "01220185327"], ["pricture", "https://graph.facebook.com/1489688394/picture"], ["thumbnail", "https://graph.facebook.com/1489688394/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Toby"], ["lastname", "Messick"], ["location", "cairo"], ["mobile", "01220185328"], ["pricture", "https://graph.facebook.com/1489688494/picture"], ["thumbnail", "https://graph.facebook.com/1489688494/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Tammie"], ["lastname", "Mei"], ["location", "cairo"], ["mobile", "01220185329"], ["pricture", "https://graph.facebook.com/1489688594/picture"], ["thumbnail", "https://graph.facebook.com/1489688594/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Zenaida"], ["lastname", "Ramsier"], ["location", "cairo"], ["mobile", "01220185330"], ["pricture", "https://graph.facebook.com/1489688694/picture"], ["thumbnail", "https://graph.facebook.com/1489688694/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Sylvia"], ["lastname", "Shurtliff"], ["location", "cairo"], ["mobile", "01220185331"], ["pricture", "https://graph.facebook.com/1489688794/picture"], ["thumbnail", "https://graph.facebook.com/1489688794/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00], ["email", nil], ["firstname", "Andres"], ["lastname", "Swindoll"], ["location", "cairo"], ["mobile", "01220185332"], ["pricture", "https://graph.facebook.com/1489688894/picture"], ["thumbnail", "https://graph.facebook.com/1489688894/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:26 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Hang"], ["lastname", "Ashcraft"], ["location", "cairo"], ["mobile", "01220185333"], ["pricture", "https://graph.facebook.com/1489688994/picture"], ["thumbnail", "https://graph.facebook.com/1489688994/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Man"], ["lastname", "Weber"], ["location", "cairo"], ["mobile", "01220185334"], ["pricture", "https://graph.facebook.com/1489689094/picture"], ["thumbnail", "https://graph.facebook.com/1489689094/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Allene"], ["lastname", "Huggard"], ["location", "cairo"], ["mobile", "01220185335"], ["pricture", "https://graph.facebook.com/1489689194/picture"], ["thumbnail", "https://graph.facebook.com/1489689194/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Krystal"], ["lastname", "Gullett"], ["location", "cairo"], ["mobile", "01220185336"], ["pricture", "https://graph.facebook.com/1489689294/picture"], ["thumbnail", "https://graph.facebook.com/1489689294/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Jann"], ["lastname", "Ratledge"], ["location", "cairo"], ["mobile", "01220185337"], ["pricture", "https://graph.facebook.com/1489689394/picture"], ["thumbnail", "https://graph.facebook.com/1489689394/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Maris"], ["lastname", "Yzaguirre"], ["location", "cairo"], ["mobile", "01220185338"], ["pricture", "https://graph.facebook.com/1489689494/picture"], ["thumbnail", "https://graph.facebook.com/1489689494/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Traci"], ["lastname", "Chenault"], ["location", "cairo"], ["mobile", "01220185339"], ["pricture", "https://graph.facebook.com/1489689594/picture"], ["thumbnail", "https://graph.facebook.com/1489689594/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Lucas"], ["lastname", "Keith"], ["location", "cairo"], ["mobile", "01220185340"], ["pricture", "https://graph.facebook.com/1489689694/picture"], ["thumbnail", "https://graph.facebook.com/1489689694/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Ardis"], ["lastname", "Piersall"], ["location", "cairo"], ["mobile", "01220185341"], ["pricture", "https://graph.facebook.com/1489689794/picture"], ["thumbnail", "https://graph.facebook.com/1489689794/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Brenda"], ["lastname", "Mckinley"], ["location", "cairo"], ["mobile", "01220185342"], ["pricture", "https://graph.facebook.com/1489689894/picture"], ["thumbnail", "https://graph.facebook.com/1489689894/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Dina"], ["lastname", "Yeadon"], ["location", "cairo"], ["mobile", "01220185343"], ["pricture", "https://graph.facebook.com/1489689994/picture"], ["thumbnail", "https://graph.facebook.com/1489689994/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Basilia"], ["lastname", "Fredricks"], ["location", "cairo"], ["mobile", "01220185344"], ["pricture", "https://graph.facebook.com/1489690094/picture"], ["thumbnail", "https://graph.facebook.com/1489690094/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Isaiah"], ["lastname", "Hartsell"], ["location", "cairo"], ["mobile", "01220185345"], ["pricture", "https://graph.facebook.com/1489690194/picture"], ["thumbnail", "https://graph.facebook.com/1489690194/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Katie"], ["lastname", "Storms"], ["location", "cairo"], ["mobile", "01220185346"], ["pricture", "https://graph.facebook.com/1489690294/picture"], ["thumbnail", "https://graph.facebook.com/1489690294/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Irvin"], ["lastname", "Gregorio"], ["location", "cairo"], ["mobile", "01220185347"], ["pricture", "https://graph.facebook.com/1489690394/picture"], ["thumbnail", "https://graph.facebook.com/1489690394/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Drucilla"], ["lastname", "Weller"], ["location", "cairo"], ["mobile", "01220185348"], ["pricture", "https://graph.facebook.com/1489690494/picture"], ["thumbnail", "https://graph.facebook.com/1489690494/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Hal"], ["lastname", "Gano"], ["location", "cairo"], ["mobile", "01220185349"], ["pricture", "https://graph.facebook.com/1489690594/picture"], ["thumbnail", "https://graph.facebook.com/1489690594/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Chere"], ["lastname", "Cogley"], ["location", "cairo"], ["mobile", "01220185350"], ["pricture", "https://graph.facebook.com/1489690694/picture"], ["thumbnail", "https://graph.facebook.com/1489690694/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Sheilah"], ["lastname", "Mcdonnell"], ["location", "cairo"], ["mobile", "01220185351"], ["pricture", "https://graph.facebook.com/1489690794/picture"], ["thumbnail", "https://graph.facebook.com/1489690794/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Sunny"], ["lastname", "Silcox"], ["location", "cairo"], ["mobile", "01220185352"], ["pricture", "https://graph.facebook.com/1489690894/picture"], ["thumbnail", "https://graph.facebook.com/1489690894/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Yolando"], ["lastname", "Cerda"], ["location", "cairo"], ["mobile", "01220185353"], ["pricture", "https://graph.facebook.com/1489690994/picture"], ["thumbnail", "https://graph.facebook.com/1489690994/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Pearly"], ["lastname", "Beer"], ["location", "cairo"], ["mobile", "01220185354"], ["pricture", "https://graph.facebook.com/1489691094/picture"], ["thumbnail", "https://graph.facebook.com/1489691094/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Keshia"], ["lastname", "Hutcherson"], ["location", "cairo"], ["mobile", "01220185355"], ["pricture", "https://graph.facebook.com/1489691194/picture"], ["thumbnail", "https://graph.facebook.com/1489691194/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Paulita"], ["lastname", "Vero"], ["location", "cairo"], ["mobile", "01220185356"], ["pricture", "https://graph.facebook.com/1489691294/picture"], ["thumbnail", "https://graph.facebook.com/1489691294/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Tiffani"], ["lastname", "Kinloch"], ["location", "cairo"], ["mobile", "01220185357"], ["pricture", "https://graph.facebook.com/1489691394/picture"], ["thumbnail", "https://graph.facebook.com/1489691394/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Candida"], ["lastname", "Cyphers"], ["location", "cairo"], ["mobile", "01220185358"], ["pricture", "https://graph.facebook.com/1489691494/picture"], ["thumbnail", "https://graph.facebook.com/1489691494/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Christiana"], ["lastname", "Fonte"], ["location", "cairo"], ["mobile", "01220185359"], ["pricture", "https://graph.facebook.com/1489691594/picture"], ["thumbnail", "https://graph.facebook.com/1489691594/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("authority", "created_at", "email", "firstname", "lastname", "location", "mobile", "pricture", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["authority", "user"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["email", nil], ["firstname", "Sadye"], ["lastname", "Crisman"], ["location", "cairo"], ["mobile", "01220185360"], ["pricture", "https://graph.facebook.com/1489691694/picture"], ["thumbnail", "https://graph.facebook.com/1489691694/picture"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 928], ["centerlock", true], ["comment", "tcfqseqnxsatynqehzjtjjhdofjnccvsvxyeqymuknccltpguw"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", false], ["kmpassed", 95433], ["mark", "Aston Martin"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 72749], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 301]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 1669], ["centerlock", false], ["comment", "dhcapblahmueefyqcqxpwmxjogdaujdzuxnfojhqirsoxxdrcs"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", true], ["kmpassed", 262245], ["mark", "Audi"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 363212], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 302]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 784], ["centerlock", true], ["comment", "fclrwkfyhmcuyeyjbuzpocqfsyrwoggpytsywvsthljqputtvb"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", false], ["kmpassed", 217595], ["mark", "Bentley"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 227364], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 303]]
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 1144], ["centerlock", true], ["comment", "tnensmyzeswmmzbxfkjpaixcpazzzvxesrkbrktteqthudvuhg"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", true], ["kmpassed", 415053], ["mark", "Bizzarrini "], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 342456], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 304]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1833], ["centerlock", false], ["comment", "mymmblqbwnjhrsdnebuckwgkplitogxecdaklieqhibrglqtgk"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", true], ["kmpassed", 366085], ["mark", "BMW"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 374895], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 305]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 439], ["centerlock", true], ["comment", "lpbtgeunrcracpprolttgqlgsfwvvdybhhwihmwpmnytmrphyk"], ["created_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["electricwindow", false], ["kmpassed", 42684], ["mark", "Bufori"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 640652], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:27 UTC +00:00], ["user_id", 306]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2128], ["centerlock", false], ["comment", "wrmyhpwsrlbegfoayblcfyurheiiyahagkrqvedwrdemzxofdv"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 307072], ["mark", "Bugatti"], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 525854], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 307]]
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 834], ["centerlock", false], ["comment", "uftiadobtvfbbobstraqpnqduqldtqlysnsfwkqaoqjicrdryf"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 482276], ["mark", "Buick"], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 423753], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 308]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1426], ["centerlock", true], ["comment", "kklxcmvhusbkuzipgrsqcvshtkctvbkdgftucrajehyjogdjxz"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 272259], ["mark", "Cadillac"], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 358789], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 309]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2807], ["centerlock", true], ["comment", "sorgewptsmcyqtphihmodnbumuhypjnhiblhjafrxwijczjklk"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 427904], ["mark", "Chevrolet"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 165308], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 310]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 1029], ["centerlock", false], ["comment", "cgzpduiqerzzzsaukxrhinaavryyqqtlgwaretmkbynxwptqfj"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 297352], ["mark", "Chrysler"], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 580631], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 311]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 1463], ["centerlock", false], ["comment", "feayttmuifgsafzstgibianzmyoxfefuwaigoiqhqkudxshlfc"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 123404], ["mark", "Citroen"], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 542162], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 312]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 1872], ["centerlock", false], ["comment", "tltqiqgxhzidiatbxwiwvwwhqthjigelfjtumwkiendosckvfo"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 250830], ["mark", "GMC"], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 208724], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 313]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2090], ["centerlock", true], ["comment", "tobbmeleqnwdrarqthvxidrhuabljonjlpxsheulvjennprzyk"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 30088], ["mark", "Daewoo"], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 551475], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 314]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2569], ["centerlock", true], ["comment", "zvklzyfvshxvkbyaioxchfrumlwiytusmmeeliwwqwtfzfnyix"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 213416], ["mark", "Daihatsu"], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 18096], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 315]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 552], ["centerlock", true], ["comment", "uuqnbkrivqxrgzkpigaasrpmnacqwebisghrjvzblohyejxdtt"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 442009], ["mark", "DeLorean"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 653799], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 316]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2325], ["centerlock", true], ["comment", "gjyojieilbqpspuhylhrlserowpvuonmvmyuzbkfupycsyyfbf"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 454864], ["mark", "Dodge"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 735521], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 317]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 725], ["centerlock", false], ["comment", "zdtwuklbejohhpuloktmcjhxtgwopxsfotxizalrxliqhgvybv"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 371015], ["mark", "Ferrari"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 362523], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 318]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 1311], ["centerlock", true], ["comment", "rgupcefhwltsnwrpvlrkgdwlbrucbbcnmbkghfivpllcsfsqsr"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 337399], ["mark", "Fiat"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 516444], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 319]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 1314], ["centerlock", true], ["comment", "drudpwygvwrhlqpjcfjosxlvaepygerbevgmowhedbzhwdicbn"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 275340], ["mark", "Ford"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 932652], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 320]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2659], ["centerlock", false], ["comment", "jqymckxcamczymgxarehovbmjstcjurwhhggejnuxdxowtjljb"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 395066], ["mark", "Honda"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 89186], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 321]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 1533], ["centerlock", false], ["comment", "hliqxtquxlmgibbtmufccwtnhtcjmoacyfufsznudyccspilzd"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 138608], ["mark", "Hyundai"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 32558], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 322]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 2305], ["centerlock", false], ["comment", "grgzfxvoqurobnwjfdnwcuzkbhjlufvzxleytfghmxqthrvmii"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 57657], ["mark", "Infiniti"], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 687314], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 323]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (5.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2352], ["centerlock", true], ["comment", "uevgoiqnfeenvbsfkdjendmknmwtykygbpkmuowapyrkcuyynt"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 143791], ["mark", "Isuzu "], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 813935], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 324]]
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 2736], ["centerlock", false], ["comment", "bnfajxgnthqkjuourxftqqhrbrqduevhxuqshuiovafepdbpzi"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 268246], ["mark", "Jaguar "], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 405299], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 325]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1569], ["centerlock", false], ["comment", "uhhczicscsmdvybdlzpnvjbrrvdajyycnjbsswvwemkmmizpgf"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 63467], ["mark", "Kia"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 770227], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 326]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 568], ["centerlock", true], ["comment", "suafbilxzuoayralgsbzvpafshthydazwaebmnnbntyonmqgct"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 63481], ["mark", "Lamborghini"], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 737549], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 327]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1532], ["centerlock", false], ["comment", "tmwwmlxidoychdqwzierymhitrqxpnfchwdgxrcvmpgnlbkzew"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 215816], ["mark", "Lancia"], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 930381], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 328]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 958], ["centerlock", true], ["comment", "aiwfkzikygogriaoogmcmbkkdgricofxvbrfpbshmaipvxmurw"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 338784], ["mark", "lexus"], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 541235], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 329]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 383], ["centerlock", true], ["comment", "bxoftorsmqbotqivsgkdvsggungujwkjnuuxdflkgpfnsbmkvb"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 313258], ["mark", "Lincoln "], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 602885], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 330]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 758], ["centerlock", false], ["comment", "tqrcnwvchzbozidikiuallzlemafczqmwgvpxowuxsggrtjqyv"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 47202], ["mark", "Maserati "], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 29507], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 331]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 801], ["centerlock", true], ["comment", "eujcgbfemgcyngqwuvxzvewmlcbxwsyugpkzwgsyhitgzvdrvb"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 120586], ["mark", "Maybach"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 184606], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 332]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 2728], ["centerlock", true], ["comment", "quyafxgnxueymznpzlacwwadqxgxryshmnqhwdjszxtrouqwtm"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", false], ["kmpassed", 310544], ["mark", "Mazda"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 9404], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 333]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 118], ["centerlock", true], ["comment", "bpcznfskrqiksiazcofcynzhxqgkibdoiowxwuhkdvogsourya"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 99113], ["mark", "McLaren"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 94003], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 334]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1416], ["centerlock", true], ["comment", "vrkvunhtdzrohhdetqfuxvbeupqzwhjuacesopsmjeniyclfss"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 423147], ["mark", "Mercedes-Benz"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 530467], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 335]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 1199], ["centerlock", false], ["comment", "wljtqjstgyymmahbsehwjydqtlfxxwqoaijjgswrnqsxigppdw"], ["created_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["electricwindow", true], ["kmpassed", 97107], ["mark", "Mercury"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 476057], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:28 UTC +00:00], ["user_id", 336]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 2113], ["centerlock", true], ["comment", "rixcukiuuzffhjtjkofubjkjhmhkrcqjwggorbidaebzolineq"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 323704], ["mark", "MINI"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 552249], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 337]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1276], ["centerlock", true], ["comment", "wlrusabwqcrneaywksuuynrqdzmbrhlwajypydwxuompklahac"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 414906], ["mark", "Mitsubishi"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 788851], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 338]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2599], ["centerlock", false], ["comment", "ukplzayiavjerfsgzbbaewvsnyudwxkzhhvlcetfkplukyqxjo"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 251292], ["mark", "Nissan"], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 32753], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 339]]
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 413], ["centerlock", false], ["comment", "mkffuexpmksyrtnfjmtqzacfaytsgltzcqvsvizeccbcmuzcbv"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 159240], ["mark", "Opel"], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 143788], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 340]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2587], ["centerlock", false], ["comment", "kgmbmovhqxkcsifnjdaxywxkzuwmvuuehyakucccxlvkdzveof"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 56616], ["mark", "Oullim"], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 926269], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 341]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2726], ["centerlock", true], ["comment", "bqjzdanaitmiktisrmiyblicxcwiwqqyudwzgaublamjjzjzne"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 134732], ["mark", "Peugeot"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 565892], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 342]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2653], ["centerlock", true], ["comment", "sptktvfvaydtofuxdlcjdkxvoxpqcgxbxlonodyprqxnnkwqkp"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 378451], ["mark", "Porsche"], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 204751], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 343]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2232], ["centerlock", false], ["comment", "ranoaahthfwafmdkbixqdeaamkmuextaflabqrdwotauswxtvq"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 397326], ["mark", "Proton"], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 996060], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 344]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 2900], ["centerlock", true], ["comment", "kbzgghtwmjbwtuzdjiqhszhwkqjjzevqnfxfzhbihtiwcuucak"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 273324], ["mark", "Renault"], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 526354], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 345]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 1398], ["centerlock", true], ["comment", "cikbiwpeeofpydseycqtnqhrrfvaqsjangdxfosrtzdxbjgold"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 369468], ["mark", "Rolls Royce"], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 702739], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 346]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1583], ["centerlock", false], ["comment", "htyrwnsokjxeumaewixozarfvfposfeqbzbnjwstxpqpkbqwho"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 172529], ["mark", "Rover"], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 652863], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 347]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 2427], ["centerlock", false], ["comment", "vofvhfggmcdmahxsstykbbkyobiqddccpxtshbpokabccyviea"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 487679], ["mark", "Saab"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 62813], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 348]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 1128], ["centerlock", true], ["comment", "gdqoxaeescfzkasnelzoksioktyffttcruscfywonorvftcozr"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 490394], ["mark", "Seat"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 532025], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 349]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1818], ["centerlock", false], ["comment", "owbfrvomjfvbbkpwwlskougcdtlmxyagxhjnoftuhtyneezlwt"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 218312], ["mark", "Skoda"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 893022], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 300]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2733], ["centerlock", true], ["comment", "arxafcdfwwlqqkevaetshahreoxpizzbnatgsknurbdfdgaere"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 203662], ["mark", "Smart"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 145004], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 301]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 2646], ["centerlock", true], ["comment", "pbffcqjlwzxrktofcvpmssoiqmrrvmaosnnnykdkpoplaiekgj"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 212726], ["mark", "Speranza"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 14094], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 302]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1375], ["centerlock", true], ["comment", "veybitisbdrgigepgwyonnsgujifwsobljbkaqdgffrskzdllr"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 363926], ["mark", "Ssang Yong"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 278066], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 303]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 1875], ["centerlock", false], ["comment", "isuomrlcxdqksruwxtjdmbdrfuqsfnyxwwywnessmljvyojlwy"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 154508], ["mark", "Subaru"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 201233], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 304]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 2523], ["centerlock", true], ["comment", "txsnmqlglickfmugxzedchyfrnggncqmfaapyrfxkbdncxzmhs"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 104847], ["mark", "Suzuki"], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 973983], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 305]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1279], ["centerlock", false], ["comment", "zdhcnmvqleviwuiwxbikjyrdwtjtujwjbhzowyxydtzxbnfwor"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 183842], ["mark", "TATA"], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 307245], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 306]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 573], ["centerlock", false], ["comment", "lijvsnzjqebvygxnqwjqxyiyfhmhiilowqglzwbcxiifwitkrs"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 70608], ["mark", "Toyota"], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 342708], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 307]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 2940], ["centerlock", true], ["comment", "qygvxxelajghybquantgruntlmidwbgydkradfnaazracuhwpb"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 119050], ["mark", "Volkswagen"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 34371], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 308]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 2999], ["centerlock", true], ["comment", "susjrynsuansseqxgrgyvxjvxhyjolpmzccstfqdsvwkdwfrvv"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 64286], ["mark", "Volvo"], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", true], ["price", 450133], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 309]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 294], ["centerlock", true], ["comment", "wnebfhirtvlwtvqsswvgqrutahirrpwgivzirukydncedgqrht"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 122001], ["mark", "Other Make"], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 520165], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 310]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 2940], ["centerlock", false], ["comment", "asfrolhimzqjvacgtfazjvzqxqiwoikdjfjvmhbbjuaaughhmt"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 456154], ["mark", "GMC "], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 233336], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 311]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 634], ["centerlock", true], ["comment", "yvilqsfmclaeivdyvrqgyhwicbstgurisugbxkvjapwymouxot"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 33484], ["mark", "Hummer"], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 363513], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 312]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1898], ["centerlock", false], ["comment", "eylmytoxcjekkotajqiviztzyvdldwetozwjdkuvzbkeljffpm"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 343047], ["mark", "Jeep "], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 953289], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 313]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2043], ["centerlock", true], ["comment", "ozmsunqhsrcxyeaffoscqzahuoicijuprozduyszajjwyyuvrv"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 77177], ["mark", "Land Rover"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 257806], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 314]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 786], ["centerlock", true], ["comment", "tozljdmcoxftfadbwftzrvohaonedykgawrciupiajpfpwrvjr"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 296340], ["mark", "hamann x6"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 626631], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 315]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 1065], ["centerlock", true], ["comment", "mnubuyydwgskktejtvxnspnguxbolhaakasknmobmeebrmwvap"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 314671], ["mark", "Mitsuoka"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 705757], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 316]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2235], ["centerlock", true], ["comment", "gqpcuyxizwyudznetrwlqagndosjufrtrtbouzsegesxmzmqkl"], ["created_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["electricwindow", true], ["kmpassed", 377489], ["mark", "Alfa Romeo"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 948922], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:29 UTC +00:00], ["user_id", 317]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 311], ["centerlock", false], ["comment", "nofoouomcdbjlccdfgpjlpbccyaznyzsyrlgllufhslhzsxaeh"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 59756], ["mark", "Aston Martin"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", true], ["price", 617666], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 318]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 138], ["centerlock", false], ["comment", "qbbolyahwqpjkbxwirjxhsumwrsetoymjlscgdtfctbfanzjrq"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 270784], ["mark", "Audi"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 383082], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 319]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (22.2ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 1303], ["centerlock", true], ["comment", "vflvuvzijyjbliysajcgweoxqmwfhmvaxyioethxjdwhpdcmyc"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 65625], ["mark", "Bentley"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 270448], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 320]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1897], ["centerlock", true], ["comment", "cueslqmgltmvuggjeztppocaflowrzeabgnpridgmzfchzyncq"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 80950], ["mark", "Bizzarrini "], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 756867], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 321]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (4.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 664], ["centerlock", true], ["comment", "aqzpvwborcqkgwcmxlbvfixfbgiizspbbyhnpghjxdnwrtirce"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 285456], ["mark", "BMW"], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 250775], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 322]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 2294], ["centerlock", false], ["comment", "vqijixalelpspxydzwditzwuhkoifbnbxchqrzowqbnmfgialt"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 2289], ["mark", "Bufori"], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 772309], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 323]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 2644], ["centerlock", false], ["comment", "lmcgcexadsvzwxfipevzcuevuuyykdmbdixrjrjyqfwdvhlpqh"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 419491], ["mark", "Bugatti"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 15623], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 324]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1948], ["centerlock", false], ["comment", "ivzmbtiplpvxnpnelnstokkjyoautavuaakgairdmcxafcwrwg"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 413750], ["mark", "Buick"], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 603274], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 325]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 2768], ["centerlock", false], ["comment", "yknqzzpkpbtqlqetmirlavjjeprsjaotmadhofkljpcjwyijem"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 351335], ["mark", "Cadillac"], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 956580], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 326]]
+  [1m[35mUser Load (3.8ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 26], ["centerlock", true], ["comment", "dgecnfufsqyaczliwwzwrhnrimbvnqfteowxjyoyfdzutbszec"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 117914], ["mark", "Chevrolet"], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", true], ["price", 175464], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 327]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 1908], ["centerlock", false], ["comment", "jnzxdahqpalqggnottrjfjgevhguxyustuadnqyvaphegaoaml"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 200772], ["mark", "Chrysler"], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 319874], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 328]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2950], ["centerlock", false], ["comment", "bxomkxykkohfroojzcthvtqpflomjernijvhpzncgcvvdegvqa"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 457435], ["mark", "Citroen"], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 491483], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 329]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 255], ["centerlock", true], ["comment", "ftpwdlhucqxywahorxwgopjadnpfkqfyamzzsazpppbcvicgbq"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 357188], ["mark", "GMC"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 276417], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 330]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 23], ["centerlock", false], ["comment", "rribihuwtjncdieebhxkouitntpajoowrphejndlgkzcxtsgsu"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 361762], ["mark", "Daewoo"], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 526097], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 331]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 2420], ["centerlock", false], ["comment", "odndjvefepkznzesoexqukzkgursdnbevwcrmiflkfbemreogj"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 280564], ["mark", "Daihatsu"], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 4055], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 332]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 123], ["centerlock", true], ["comment", "jedhndjiwaszvkpfipayzhpoavlheouweixftiufiigxpwfxxo"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 159222], ["mark", "DeLorean"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 385034], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 333]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2034], ["centerlock", true], ["comment", "iflmyjmurrcstcfqlctrddskmcjqpwxvmrxufrbrjweehthqsi"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 492583], ["mark", "Dodge"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 885475], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 334]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 1280], ["centerlock", true], ["comment", "wsdfnsfpydhpsebtkxvjfuymocqygorgoynrqqddtcygblyytp"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 456135], ["mark", "Ferrari"], ["model", "Virage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 595887], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 335]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1709], ["centerlock", false], ["comment", "iyjjnncxntifbsvvxjfraxdxcbxkbaylwpaphapredtocbiwhe"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 139465], ["mark", "Fiat"], ["model", "Veryca"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", false], ["price", 315662], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 336]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 1833], ["centerlock", false], ["comment", "wyfqjkgpdgwsxdxtdtbxdubwlzpjgrgqnigtoctvrjqxbsbmis"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 20122], ["mark", "Ford"], ["model", "Z7"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 864648], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 337]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", true], ["cc", 1722], ["centerlock", false], ["comment", "yltchvnhqbsybvsglrddinmjirckwoulgwtfccclhrnvtfdjtj"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", false], ["kmpassed", 137797], ["mark", "Honda"], ["model", "Acadia"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 319156], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 338]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 1093], ["centerlock", true], ["comment", "huirhtnhtdttuogspkjndohogcchvdlsynnzcihazendpvnwwm"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 466627], ["mark", "Hyundai"], ["model", "Envoy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 335082], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 339]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 2883], ["centerlock", true], ["comment", "knasiaowaiyvlhfhgvpvjklvrkrsmqfepjezuuwbpjxezfbpfc"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 308330], ["mark", "Infiniti"], ["model", "Jimmy"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 399752], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 340]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1969], ["centerlock", false], ["comment", "mxvyrpnarclbzodjrkutxilctxxwajzeuzekcweeuwheovtozc"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 176815], ["mark", "Isuzu "], ["model", "Pickup"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", false], ["price", 293095], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 341]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", true], ["automatic", false], ["cc", 1435], ["centerlock", false], ["comment", "mpcrzwbrzvmwlfvcukkzstoyqxechklbgsnmslqnswqitbcnrt"], ["created_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["electricwindow", true], ["kmpassed", 453825], ["mark", "Jaguar "], ["model", "Sierra"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356187071.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 701], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356187097.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:30 UTC +00:00], ["user_id", 342]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", false], ["cc", 1334], ["centerlock", true], ["comment", "xvgoeszkstsvablaghhoojbrutilxdrvdzjplgzfsoymnjafiu"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", true], ["kmpassed", 24643], ["mark", "Kia"], ["model", "Suburban"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356186456.jpg&h=245&w=475&zc=1"], ["powersteering", false], ["price", 617978], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 343]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", false], ["cc", 1821], ["centerlock", true], ["comment", "mntxvjtzwgtzaqjmfomyfrhmuatfzsqxxcpcdviyardmvaedaq"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", true], ["kmpassed", 407498], ["mark", "Lamborghini"], ["model", "Terrain"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356021628.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 957518], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 344]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 2929], ["centerlock", false], ["comment", "mraaxnvmkmjhzdsmwtkngmynxtbtdoywzbfsxrqtmqwxchzdow"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", false], ["kmpassed", 390140], ["mark", "Lancia"], ["model", "Yukon"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356019798.jpg&h=57&w=94&zc=1"], ["powersteering", true], ["price", 745043], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 345]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 1210], ["centerlock", false], ["comment", "qmnrabwpzigrylerwswlpygtqlbaerckzyrzkvdrjkdwrgbpan"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", false], ["kmpassed", 449438], ["mark", "lexus"], ["model", "DB7/DB9"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1355985326.JPG&h=57&w=94&zc=1"], ["powersteering", false], ["price", 713666], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 346]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", false], ["cc", 1641], ["centerlock", true], ["comment", "sdscgcftsmvyqpvtmxrexzbiicnhzmgqxyhjcupxbaytswyagu"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", true], ["kmpassed", 113975], ["mark", "Lincoln "], ["model", "DBS"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356159118.JPG&h=57&w=94&zc=1"], ["powersteering", true], ["price", 940766], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 347]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 838], ["centerlock", true], ["comment", "wzuzrbenfkeztgnbebuunxkuclfjasuhhckxdhsnynuwjgcatx"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", false], ["kmpassed", 139334], ["mark", "Maserati "], ["model", "Vanquish"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356160793.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 439311], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 348]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", false], ["automatic", true], ["cc", 669], ["centerlock", true], ["comment", "rluewjwnokrpyptpyxfapuxznhqxfxalygjfbblknnvvpqrltx"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", false], ["kmpassed", 167020], ["mark", "Maybach"], ["model", "Vantage"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356249357.jpg&h=245&w=475&zc=1"], ["powersteering", true], ["price", 942113], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1355984493.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 349]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (4.7ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", true], ["airbag", false], ["automatic", true], ["cc", 187], ["centerlock", false], ["comment", "acaflppmyroavrqnobhfzupjbvrosvfrwxsqezipgvdrrclloi"], ["created_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["electricwindow", false], ["kmpassed", 486453], ["mark", "Mazda"], ["model", "Rapide"], ["picture", "http://www.carbazar.net/timthumb.php?src=product/1356241271.JPG&h=245&w=475&zc=1"], ["powersteering", true], ["price", 673663], ["thumbnailurl", "http://www.carbazar.net/timthumb.php?src=product/1356241446.JPG&h=57&w=94&zc=1"], ["updated_at", Sun, 23 Dec 2012 23:11:31 UTC +00:00], ["user_id", 300]]
+
+
+Started GET "/cars" for 127.0.0.1 at 2012-12-24 01:11:37 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (1.3ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (356.4ms)
+Completed 200 OK in 374ms (Views: 365.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /cars.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:11:38 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/cars/304" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"304"}
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "304"]]
+Rendered cars/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:20:21 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/304" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"304"}
+  [1m[35mCar Load (0.4ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "304"]]
+Rendered cars/show.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 97ms (Views: 94.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:26:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/304" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"304"}
+  [1m[36mCar Load (0.1ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "304"]]
+Rendered cars/show.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:54 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (1.4ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (255.5ms)
+Completed 200 OK in 279ms (Views: 263.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:47:57 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/304" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"304"}
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "304"]]
+Rendered cars/show.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/305" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"305"}
+  [1m[35mCar Load (1.1ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "305"]]
+Rendered cars/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /cars.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:48:04 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/309" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"309"}
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "309"]]
+Rendered cars/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-24 01:49:28 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars/1/edit" for 127.0.0.1 at 2012-12-24 01:49:37 +0200
+  Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Car with id=1):
+  app/controllers/cars_controller.rb:37:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)

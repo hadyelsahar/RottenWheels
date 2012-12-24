@@ -2,10 +2,9 @@
 
 <table>
   <tr>
+  	<th></th>
     <th>Mark</th>
     <th>Model</th>
-    <th>Thumbnailurl</th>
-    <th>Picture</th>
     <th>Comment</th>
     <th>Price</th>
     <th>Cc</th>
@@ -23,10 +22,9 @@
 
 <% @cars.each do |car| %>
   <tr>
+  	<td><%= link_to image_tag(car.thumbnailurl) , car %></td>
     <td><%= car.mark %></td>
     <td><%= car.model %></td>
-    <td><%= car.thumbnailurl %></td>
-    <td><%= car.picture %></td>
     <td><%= car.comment %></td>
     <td><%= car.price %></td>
     <td><%= car.cc %></td>
@@ -37,9 +35,8 @@
     <td><%= car.abs %></td>
     <td><%= car.electricwindow %></td>
     <td><%= car.airbag %></td>
-    <td><%= link_to 'Show', car %></td>
-    <td><%= link_to 'Edit', edit_car_path(car) %></td>
-    <td><%= link_to 'Destroy', car, confirm: 'Are you sure?', method: :delete %></td>
+    <td></td>
+    
   </tr>
 <% end %>
 </table>

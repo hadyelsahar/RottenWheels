@@ -5,8 +5,8 @@ carthumbnails = [
   "http://www.carbazar.net/timthumb.php?src=product/1356186478.jpg&h=57&w=94&zc=1",
   "http://www.carbazar.net/timthumb.php?src=product/1356021646.JPG&h=57&w=94&zc=1",
   "http://www.carbazar.net/timthumb.php?src=product/1356019722.jpg&h=57&w=94&zc=1",
-  "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=575&w=94&zc=1",
-  "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=575&w=94&zc=1",
+  "http://www.carbazar.net/timthumb.php?src=product/1355985166.JPG&h=57&w=94&zc=1",
+  "http://www.carbazar.net/timthumb.php?src=product/1356159079.JPG&h=57&w=94&zc=1",
   "http://www.carbazar.net/timthumb.php?src=product/1356161008.JPG&h=57&w=94&zc=1"
   ] 
 carimages = [
