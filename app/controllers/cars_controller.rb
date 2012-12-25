@@ -2,7 +2,76 @@ class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
   def index
-    @cars = Car.all
+   
+    nameattr = {:mark => @mark , :model => @model}
+    minattr = {:ccmin => @ccmin , :kmpassedmin => @kmpassedmin , :pricemin => @pricemin }
+    maxattr = {:ccmax => @ccmax , :kmpassedmax => @kmpassedmax , :pricemax => @pricemax }
+    booleanattr = {:automatic => @automatic , :centerlock => @centerlock , :abs => @abs , :airbag =>@airbag, :electricwindow => @electicwindow ,:automatic => @autimatic ,:powersteering => @powersteering }
+
+    
+    
+    # allkeys.concat(nameattr.keys).concat(minattr.keys).concat(maxattr.keys).concat(booleanattr.keys)
+    
+    nameattr.keys.each do |attr|
+      if params[attr] != nil && params[attr] != "" 
+        #logger.debug "\n\n\n\n >>>> the params are " + attr.to_s + "\t"  + params[attr]     
+        nameattr[attr] = params[attr]   
+      end
+    end
+    
+    minattr.keys.each do |attr|
+      if params[attr] != nil && params[attr] != "" 
+        #logger.debug "\n\n\n\n >>>> the params are " + attr.to_s + "\t"  + params[attr]     
+        minattr[attr] = params[attr]   
+      end
+    end
+    
+    maxattr.keys.each do |attr|
+      if params[attr] != nil && params[attr] != ""
+        #logger.debug "\n\n\n\n >>>> the params are " + attr.to_s + "\t"  + params[attr]     
+        maxattr[attr] = params[attr]   
+      end
+    end
+    
+    booleanattr.keys.each do |attr|
+      if params[attr] != nil      
+        booleanattr[attr] = (params[attr] == "on")   
+      end
+    end
+    
+    @searchparams = nameattr.merge(minattr).merge(maxattr).merge(booleanattr)
+    
+#     
+#      
+    # nameattr = {:mark => @mark , :model => @model}
+    # minattr = {:ccmin => @ccmin , :kmpassedmin => @kmpassedmin , :pricemin => @pricemin }
+    # maxattr = {:ccmax => @ccmax , :kmpassedmax => @kmpassedmax , :pricemax => @pricemax }
+    # booleanattr = {:automatic => @automatic , :centerlock => @centerlock , :abs => @abs , :electricwindow => @electicwindow ,:automatic => @autimatic ,:powersteering => @powersteering }
+# 
+
+    if nameattr.values.any?{|d| d != nil } || minattr.values.any?{|d| d != nil } || maxattr.values.any?{|d| d != nil } || booleanattr.values.any? {|d| d == true }
+      @cars = Car
+      nameattr.keys.each do |i|
+        @cars = @cars.where(i.to_s+" like \""+ nameattr[i]+"\"") unless nameattr[i] == nil 
+      end 
+      minattr.keys.each do |i|
+        attr = i.to_s.sub("min","")
+        @cars = @cars.where(attr+" > "+ minattr[i]) unless minattr[i] == nil
+        
+      end 
+       maxattr.keys.each do |i|
+        attr = i.to_s.sub("max","")
+        @cars = @cars.where(attr+" < "+ maxattr[i]) unless maxattr[i] == nil
+      end 
+      
+      booleanattr.keys.each do |i|
+        @cars = @cars.where(i.to_s+" = ?",booleanattr[i]) unless booleanattr[i] == nil
+      end
+      
+           
+    else   
+      @cars = Car.all
+    end     
 
     respond_to do |format|
       format.html # index.html.erb
