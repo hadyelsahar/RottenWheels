@@ -3,13 +3,15 @@
 <%= form_tag("/cars" , :method=>:get) do %>
 
 <label for="mark">Make</label> <%= text_field_tag 'mark' , @searchparams[:mark]%>
-<label for="model">model</label> <%= text_field_tag 'model',@searchparams[:model] %>
+<label for="model">model</label> <%= text_field_tag 'model',@searchparams[:model] %> </br/>
 <label for="pricemin">minimum price</label> <%= number_field_tag 'pricemin' , @searchparams[:pricemin],:min => 0 , :step=> 100 %> 
 <label for="pricemax">maximum price</label> <%= number_field_tag 'pricemax' , @searchparams[:pricemax],:min => 0 , :step=> 100 %>
 <label for="ccmin">,minimum cc</label> <%= number_field_tag 'ccmin' , @searchparams[:ccmin],:min => 0 , :step=> 100 %>
 <label for="ccmax">maximum cc</label> <%= number_field_tag 'ccmax' , @searchparams[:ccmax], :min => 0 , :step=> 100 %>
 <label for="kmpassedmin">minimum kmpassed</label> <%= number_field_tag 'kmpassedmin' , @searchparams[:kmpassedmin], :step=> 100 %>
 <label for="kmpassedmax">maximum kmpassed</label> <%= number_field_tag 'kmpassedmax' , @searchparams[:kmpassedmax], :step=> 100 %>
+<br/>
+
 <label for="automatic">automatic</label> <%= check_box_tag 'automatic' , nil , @searchparams[:automatic] %>
 <label for="abs">abs</label> <%= check_box_tag 'abs' , nil, @searchparams[:abs]%>
 <label for="airbag">airbag</label> <%= check_box_tag 'airbag'  , nil, @searchparams[:airbag] %>

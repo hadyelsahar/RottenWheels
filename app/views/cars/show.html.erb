@@ -12,12 +12,12 @@
 
 <p>
   <b>Thumbnailurl:</b>
-  <%= @car.thumbnailurl %>
+  <%= image_tag(@car.thumbnailurl) %>
 </p>
 
 <p>
   <b>Picture:</b>
-  <%= @car.picture %>
+  <%= image_tag(@car.picture) %>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
 </p>
 
 <p>
-  <b>Cc:</b>
+  <b>Price:</b>
   <%= @car.price %>
 </p>
 
@@ -70,6 +70,26 @@
   <%= @car.airbag %>
 </p>
 
+<div>
+	<h3>Contact Info</h3>
+	<p>
+		<%= image_tag @car.user.thumbnail %> 
+  		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+  		<br/>
+  		<b>email:</b>
+  		<%= @car.user.email%>
+  		<br/>
+  		<b>mobile:</b>
+  		<%= @car.user.mobile%>
+  		<br/>
+  		<b>place:</b>
+  		<%= @car.user.location%>
+  		<br/>
+	</p>
+</div>
 
+
+
+<!-- 
 <%= link_to 'Edit', edit_car_path(@car) %> |
-<%= link_to 'Back', cars_path %>
+<%= link_to 'Back', cars_path %> -->
