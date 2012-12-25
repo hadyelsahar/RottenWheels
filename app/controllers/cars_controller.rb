@@ -52,7 +52,7 @@ class CarsController < ApplicationController
     if nameattr.values.any?{|d| d != nil } || minattr.values.any?{|d| d != nil } || maxattr.values.any?{|d| d != nil } || booleanattr.values.any? {|d| d == true }
       @cars = Car
       nameattr.keys.each do |i|
-        @cars = @cars.where(i.to_s+" like \""+ nameattr[i]+"\"") unless nameattr[i] == nil 
+        @cars = @cars.where("lower("i.to_s+") like '"+ nameattr[i].downcase+"'") unless nameattr[i] == nil 
       end 
       minattr.keys.each do |i|
         attr = i.to_s.sub("min","")
