@@ -57,18 +57,15 @@ class CarsController < ApplicationController
       minattr.keys.each do |i|
         attr = i.to_s.sub("min","")
         @cars = @cars.where(attr+" > "+ minattr[i]) unless minattr[i] == nil
-        
       end 
        maxattr.keys.each do |i|
         attr = i.to_s.sub("max","")
         @cars = @cars.where(attr+" < "+ maxattr[i]) unless maxattr[i] == nil
-      end 
-      
+      end
       booleanattr.keys.each do |i|
         @cars = @cars.where(i.to_s+" = ?",booleanattr[i]) unless booleanattr[i] == nil
       end
-      
-           
+        
     else   
       @cars = Car.all
     end     
