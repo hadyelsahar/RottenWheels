@@ -14642,3 +14642,1582 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-12-26 00:40:11 +0200
 Served asset /users.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCars (20121223012544)
+Migrating to CreateUsers (20121223014254)
+Migrating to AddPriceToCars (20121223045649)
+Migrating to AddUserToCars (20121223063140)
+Migrating to AddDeviseToUsers (20130108110404)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255), "lastname" varchar(255), "email" varchar(255), "mobile" varchar(255), "location" varchar(255), "pricture" varchar(255), "thumbnail" varchar(255), "authority" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstname" varchar(255), "lastname" varchar(255), "email" varchar(255) DEFAULT '' NOT NULL, "mobile" varchar(255), "location" varchar(255), "pricture" varchar(255), "thumbnail" varchar(255), "authority" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255)) [0m
+  [1m[35m (0.2ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130108110404')
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("cars")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 13:07:22 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (1.5ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (388.7ms)
+Completed 200 OK in 691ms (Views: 676.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /users.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /cars.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /cars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:23 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 13:07:24 +0200
+Served asset  - 404 Not Found (8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 178ms (Views: 86.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /cars.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:30 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:36 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/registrations/new.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 92ms (Views: 68.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:07:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-01-08 13:08:14 +0200
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zb+75dL+JXx0gGcWQfRXnXeKVC8uIUYzZIqhV3kohS0=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = 'hadyelsahar@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "users" ("authority", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "firstname", "last_sign_in_at", "last_sign_in_ip", "lastname", "location", "mobile", "pricture", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "thumbnail", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["authority", nil], ["created_at", Tue, 08 Jan 2013 11:08:15 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "hadyelsahar@gmail.com"], ["encrypted_password", "$2a$10$agqke5CDqnzF0wHDFogLTOLT8GJwcSqEl0/PMyJSw5tfs4jMPgWzC"], ["firstname", nil], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["lastname", nil], ["location", nil], ["mobile", nil], ["pricture", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["thumbnail", nil], ["updated_at", Tue, 08 Jan 2013 11:08:15 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-01-08 11:08:15.213959', "current_sign_in_at" = '2013-01-08 11:08:15.213959', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-01-08 11:08:15.214511' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 608ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:08:15 +0200
+Served asset /rails.png - 304 Not Modified (56ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+Rendered users/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 115ms (Views: 108.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /cars.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:08:26 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:45:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:45:37 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:50:21 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 241ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:50:21 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 13:50:24 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (4.0ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (390.1ms)
+Completed 200 OK in 650ms (Views: 635.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /cars.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /cars.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /users.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 13:50:25 +0200
+Served asset  - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/cars/304" for 127.0.0.1 at 2013-01-08 13:50:29 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"304"}
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "304"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 301 LIMIT 1
+Rendered cars/show.html.erb within layouts/application (286.7ms)
+Completed 500 Internal Server Error in 302ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___118532025__621597228'
+  app/controllers/cars_controller.rb:88:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/cars/305" for 127.0.0.1 at 2013-01-08 13:50:42 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"305"}
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "305"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 302 LIMIT 1
+Rendered cars/show.html.erb within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___118532025__621597228'
+  app/controllers/cars_controller.rb:88:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+  Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered cars/_form.html.erb (29.4ms)
+Rendered cars/new.html.erb within layouts/application (97.7ms)
+Completed 200 OK in 169ms (Views: 113.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:11 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (1.4ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (294.3ms)
+Completed 200 OK in 326ms (Views: 311.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:51:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 13:51:17 +0200
+Served asset  - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-01-08 13:51:22 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "sign_out"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=sign_out):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-01-08 13:51:28 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "sign_out"]]
+Completed 404 Not Found in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=sign_out):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-01-08 13:52:16 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "sign_out"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=sign_out):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-01-08 13:52:20 +0200
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 154ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:52:20 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:52:29 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:52:29 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:52:58 +0200
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-01-08 13:53:02 +0200
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Rendered users/index.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 185ms (Views: 180.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:53:02 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:53:02 +0200
+Served asset /cars.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:53:02 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:53:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:53:03 +0200
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:53:03 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:53:03 +0200
+Served asset /cars.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:53:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:53:03 +0200
+Served asset /users.js - 304 Not Modified (6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:53:07 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (12.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:53:08 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/password" for 127.0.0.1 at 2013-01-08 13:54:10 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"password"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "password"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=password):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:54:16 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:54:16 +0200
+Served asset /rails.png - 304 Not Modified (91ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-01-08 13:54:22 +0200
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:54:22 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 13:54:30 +0200
+  Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:54:30 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered users/show.html.erb within layouts/application (68.8ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 13:54:35 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-01-08 13:54:38 +0200
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 13:54:39 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:00 +0200
+Served asset /rails.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:02 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:03 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:03 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:04 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:04 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:04 +0200
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:04 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:06 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:06 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-08 14:02:07 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:03:08 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (3.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 453ms (Views: 197.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /cars.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /users.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /cars.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /jquery.js - 304 Not Modified (86ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /users.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (1.8ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (204.6ms)
+Completed 200 OK in 220ms (Views: 213.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:21 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:22 +0200
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 14:03:22 +0200
+Served asset  - 404 Not Found (7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2013-01-08 14:03:23 +0200
+  Processing by CarsController#new as HTML
+Completed 401 Unauthorized in 32ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:03:23 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 115ms (Views: 15.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:23 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:23 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:23 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:03:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-01-08 14:03:46 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "sign_out"]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=sign_out):
+  app/controllers/users_controller.rb:16:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (40.2ms)
+Rendered users/new.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /application.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:05:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 14:14:38 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (1.9ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (223.4ms)
+Completed 200 OK in 253ms (Views: 241.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 14:14:39 +0200
+Served asset  - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/cars/315" for 127.0.0.1 at 2013-01-08 14:14:44 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"315"}
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "315"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 312 LIMIT 1[0m
+Rendered cars/show.html.erb within layouts/application (261.1ms)
+Completed 500 Internal Server Error in 280ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___429670350__618703488'
+  app/controllers/cars_controller.rb:86:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (2.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 164ms (Views: 28.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /users.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+  Processing by CarsController#index as HTML
+  [1m[35mCar Load (1.6ms)[0m  SELECT "cars".* FROM "cars" 
+Rendered cars/index.html.erb within layouts/application (284.2ms)
+Completed 200 OK in 304ms (Views: 297.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-08 14:31:39 +0200
+Served asset  - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+  Processing by CarsController#new as HTML
+Completed 401 Unauthorized in 36ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 138ms (Views: 14.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:40 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:31:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+>>>>>>>>>>>>>>>>>
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:46:35 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'hadyelsahar@gmail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 359ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 186ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /cars.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:36 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'hadyelsahar@gmail.com' LIMIT 1
+Completed 401 Unauthorized in 207ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/shared/_links.erb (1.1ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 164ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-08 14:46:50 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "user"=>{"email"=>"hadyelsahar@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'hadyelsahar@gmail.com' LIMIT 1[0m
+  [1m[35m (1.8ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2013-01-08 12:46:50.928070', "sign_in_count" = 2, "updated_at" = '2013-01-08 12:46:50.929099' WHERE "users"."id" = 1
+Redirected to http://localhost:3000/cars/new
+Completed 302 Found in 360ms
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+  Processing by CarsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered cars/_form.html.erb (109.5ms)
+Rendered cars/new.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 199ms (Views: 119.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-08 14:46:51 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 14:47:29 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 8], ["centerlock", true], ["comment", "asdsdsadsadasdasasdadsadsadsa"], ["created_at", Tue, 08 Jan 2013 12:47:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 9], ["mark", "axxcds"], ["model", "qasdadas"], ["picture", "123456765432"], ["powersteering", true], ["price", 16], ["thumbnailurl", "12345654321"], ["updated_at", Tue, 08 Jan 2013 12:47:29 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/cars/413
+Completed 302 Found in 230ms
+
+
+Started GET "/cars/413" for 127.0.0.1 at 2013-01-08 14:47:29 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"413"}
+  [1m[35mCar Load (0.2ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "413"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered cars/show.html.erb within layouts/application (123.5ms)
+Completed 500 Internal Server Error in 133ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___429670350__618703488'
+  app/controllers/cars_controller.rb:86:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 14:48:25 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+>>>>   {"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 8], ["centerlock", true], ["comment", "asdsdsadsadasdasasdadsadsadsa"], ["created_at", Tue, 08 Jan 2013 12:48:25 UTC +00:00], ["electricwindow", false], ["kmpassed", 9], ["mark", "axxcds"], ["model", "qasdadas"], ["picture", "123456765432"], ["powersteering", true], ["price", 16], ["thumbnailurl", "12345654321"], ["updated_at", Tue, 08 Jan 2013 12:48:25 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/cars/414
+Completed 302 Found in 221ms
+
+
+Started GET "/cars/414" for 127.0.0.1 at 2013-01-08 14:48:25 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"414"}
+  [1m[35mCar Load (0.3ms)[0m  SELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1  [["id", "414"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered cars/show.html.erb within layouts/application (148.8ms)
+Completed 500 Internal Server Error in 159ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___429670350__618703488'
+  app/controllers/cars_controller.rb:86:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 14:49:53 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 146ms
+
+ArgumentError (wrong number of arguments(0 for 1)):
+  app/controllers/cars_controller.rb:113:in `[]'
+  app/controllers/cars_controller.rb:113:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 14:50:28 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+>>>>   #<Car:0xb61da1f8>
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 8], ["centerlock", true], ["comment", "asdsdsadsadasdasasdadsadsadsa"], ["created_at", Tue, 08 Jan 2013 12:50:29 UTC +00:00], ["electricwindow", false], ["kmpassed", 9], ["mark", "axxcds"], ["model", "qasdadas"], ["picture", "123456765432"], ["powersteering", true], ["price", 16], ["thumbnailurl", "12345654321"], ["updated_at", Tue, 08 Jan 2013 12:50:29 UTC +00:00], ["user_id", nil]]
+Redirected to http://localhost:3000/cars/415
+Completed 302 Found in 243ms
+
+
+Started GET "/cars/415" for 127.0.0.1 at 2013-01-08 14:50:29 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"415"}
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "415"]]
+  [1m[35mUser Load (5.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered cars/show.html.erb within layouts/application (140.8ms)
+Completed 500 Internal Server Error in 156ms
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    73: <div>
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+  app/views/cars/show.html.erb:76:in `_app_views_cars_show_html_erb___429670350__618703488'
+  app/controllers/cars_controller.rb:86:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.3ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 14:50:51 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 104ms
+
+NoMethodError (undefined method `User' for #<Car:0xb60e6634>):
+  app/controllers/cars_controller.rb:117:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 15:25:18 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+>>>>   hadyelsahar@gmail.com
+Completed 500 Internal Server Error in 109ms
+
+ActiveRecord::AssociationTypeMismatch (User(#-618321858) expected, got String(#84835160)):
+  app/controllers/cars_controller.rb:116:in `create'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (100.6ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (109.3ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2013-01-08 15:26:04 +0200
+  Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mpQfYmDy0PhEt/k7X0uHCY3QuU9maQwHaVn0qHc72IU=", "car"=>{"mark"=>"axxcds", "model"=>"qasdadas", "thumbnailurl"=>"12345654321", "picture"=>"123456765432", "comment"=>"asdsdsadsadasdasasdadsadsadsa", "price"=>"16", "cc"=>"8", "kmpassed"=>"9", "automatic"=>"1", "centerlock"=>"1", "powersteering"=>"1", "abs"=>"0", "electricwindow"=>"0", "airbag"=>"1"}, "commit"=>"Create Car"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+>>>>   #<User:0xb5e510cc>
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cars" ("abs", "airbag", "automatic", "cc", "centerlock", "comment", "created_at", "electricwindow", "kmpassed", "mark", "model", "picture", "powersteering", "price", "thumbnailurl", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["abs", false], ["airbag", true], ["automatic", true], ["cc", 8], ["centerlock", true], ["comment", "asdsdsadsadasdasasdadsadsadsa"], ["created_at", Tue, 08 Jan 2013 13:26:04 UTC +00:00], ["electricwindow", false], ["kmpassed", 9], ["mark", "axxcds"], ["model", "qasdadas"], ["picture", "123456765432"], ["powersteering", true], ["price", 16], ["thumbnailurl", "12345654321"], ["updated_at", Tue, 08 Jan 2013 13:26:04 UTC +00:00], ["user_id", 1]]
+Redirected to http://localhost:3000/cars/416
+Completed 302 Found in 231ms
+
+
+Started GET "/cars/416" for 127.0.0.1 at 2013-01-08 15:26:04 +0200
+  Processing by CarsController#show as HTML
+  Parameters: {"id"=>"416"}
+  [1m[36mCar Load (1.1ms)[0m  [1mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT 1[0m  [["id", "416"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered cars/show.html.erb within layouts/application (236.8ms)
+Completed 500 Internal Server Error in 270ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+):
+    74: 	<h3>Contact Info</h3>
+    75: 	<p>
+    76: 		<%= image_tag @car.user.thumbnail %> 
+    77:   		<%= @car.user.firstname + "\t" + @car.user.lastname  %>
+    78:   		<br/>
+    79:   		<b>email:</b>
+    80:   		<%= @car.user.email%>
+  app/views/cars/show.html.erb:77:in `_app_views_cars_show_html_erb___429670350__618703488'
+  app/controllers/cars_controller.rb:86:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)

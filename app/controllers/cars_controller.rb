@@ -1,4 +1,8 @@
 class CarsController < ApplicationController
+  
+  before_filter :authenticate_user!, :except => [:show, :index]
+
+  
   # GET /cars
   # GET /cars.json
   def index
@@ -8,8 +12,6 @@ class CarsController < ApplicationController
     maxattr = {:ccmax => @ccmax , :kmpassedmax => @kmpassedmax , :pricemax => @pricemax }
     booleanattr = {:automatic => @automatic , :centerlock => @centerlock , :abs => @abs , :airbag =>@airbag, :electricwindow => @electicwindow ,:automatic => @autimatic ,:powersteering => @powersteering }
 
-    
-    
     # allkeys.concat(nameattr.keys).concat(minattr.keys).concat(maxattr.keys).concat(booleanattr.keys)
     
     nameattr.keys.each do |attr|
@@ -106,7 +108,13 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
+    
+    p = params[:car]
+    
+    
     @car = Car.new(params[:car])
+    @car.user = current_user
+    logger.debug ">>>>   " + current_user.to_s
 
     respond_to do |format|
       if @car.save
