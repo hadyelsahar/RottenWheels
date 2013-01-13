@@ -8,6 +8,14 @@ gem 'rails', '3.1.0'
 gem 'sqlite3'
 #gem 'pg'
 gem 'devise','2.1.2'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+gem 'oauth2'
+
+gem "nifty-generators", :group => :development
+
 
 
 #devise authentication framework
@@ -36,3 +44,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem "mocha", :group => :test

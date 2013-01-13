@@ -1,0 +1,53 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+<div>
+  <%= f.label :firstname %>:<br />
+  <%= f.text_field :firstname %><br />
+</div>
+
+<div>
+  <%= f.label :lastname %>:<br />
+  <%= f.text_field :lastname %><br />
+</div>
+
+<div>
+  <%= f.label :picture %>:<br />
+  <%= f.text_field :thumbnail %><br />
+</div>
+
+<div>
+  <%= f.label :mobile %>:<br />
+  <%= f.phone_field :mobile %><br />
+</div>
+
+<div><%= f.label :email %><br />
+<%= f.email_field :email %></div>
+
+<% if @user.password_required? %>  
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+<% end %>
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+
+<p><strong>or sign up using :</strong></p>  
+<a href="/auth/twitter" class="auth_provider">  
+  <%= image_tag "twitter_32.png", :size => "32x32", :alt => "Twitter" %>Twitter</a>  
+<a href="/auth/facebook" class="auth_provider">  
+  <%= image_tag "facebook_32.png", :size => "32x32",  :alt => "Facebook" %>Facebook</a>  
+<a href="/auth/linkedin" class="auth_provider">  
+  <%= image_tag "linkedin_32.png", :size => "32x32", :alt => "linkedin" %>linkedin</a>    
+<div class="clear"></div>  
+
+
+
+
+
+<%= render "devise/shared/links" %>
