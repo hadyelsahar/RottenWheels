@@ -38,16 +38,16 @@ basemobileno = "012201853"
 
 User.delete_all
 Car.delete_all
-
-1.upto(usernames.length) do |n|  
-  
-  firstname = usernames[n].split(" ").first
-  lastname = usernames[n].split(" ").second
-  mobile = basemobileno + (10+n).to_s
-  
-  User.create :firstname => firstname  , :lastname => lastname  , :mobile => mobile , :thumbnail => userpicture[n] , :pricture => userpicture[n] , :location => "cairo" , :authority => "user" 
-   
-end
+# 
+# 1.upto(usernames.length-1) do |n|  
+#   
+  # firstname = usernames[n].split(" ").first
+  # lastname = usernames[n].split(" ").second
+  # mobile = basemobileno + (10+n).to_s
+#   
+  # User.create :firstname => firstname  , :lastname => lastname  , :mobile => mobile , :thumbnail => userpicture[n] , :pricture => userpicture[n] , :location => "cairo" , :authority => "user" 
+#    
+# end
 
 
 1.upto(100) do |n|
