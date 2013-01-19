@@ -54,7 +54,7 @@ Car.delete_all
 
 1.upto(100) do |n|
   
-  randomComment = "For the most part, small car shoppers are no longer looking for a basic, 'economy car' transportation appliance. More likely they're seeking a vehicle that's small and economical but also stylish, tech-focused, and fun to drive—and that's what the 2013 Ford Focus is. With the introduction of a completely redesigned" 
+  randomComment = "For the most part, small car shoppers are no longer looking for a basic,  economy car  transportation appliance. More likely they re seeking a vehicle that s small and economical but also stylish, tech-focused, and fun to drive—and that s what the 2013 Ford Focus is. With the introduction of a completely redesigned" 
   Car.create :mark => mark[rand(mark.length)] , :model => model[rand(model.length)], :thumbnailurl => carthumbnails[rand(carthumbnails.length)],:picture => carimages[rand(carimages.length)], :cc => rand(3000) ,:kmpassed => rand(500000) , :automatic => rand(2) == 1 ,:centerlock => rand(2) == 1 , :powersteering => rand(2) == 1 , :abs => rand(2) == 1 , :electricwindow => rand(2) == 1 ,:airbag => rand(2) == 1  , :user =>  User.all[n%User.all.length], :price => rand(1000000), :comment => randomComment  
 end
 
