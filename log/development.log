@@ -36719,3 +36719,517 @@ ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont
   
 
 Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-19 02:59:22 +0200
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/authentications" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+  Processing by AuthenticationsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35mAuthentication Load (1.4ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."user_id" = 16
+Rendered authentications/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 82ms (Views: 30.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /cars.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/media.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /media.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettyPhoto.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /prettyPhoto.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /twitter.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transitions.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /transitions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /registrations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/web-style.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /web-style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /all.css - 404 Not Found (19ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /cars.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /registrations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:28 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /twitter.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/web-style.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /web-style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/transitions.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /transitions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prettyPhoto.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /prettyPhoto.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/media.css" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /media.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /bg.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-bg.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /header-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter_32.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /twitter_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/facebook_32.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /facebook_32.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/footer-top.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /footer-top.png - 304 Not Modified (0ms)
+
+
+Started GET "/images/large-twitter.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/large-twitter.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/assets/linkedin_32.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /linkedin_32.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/footer-bg.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /footer-bg.png - 304 Not Modified (0ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.woff" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.woff"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.woff" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.woff"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/usefullinks.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /usefullinks.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cross.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /cross.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/latesttestimonial.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /latesttestimonial.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/speach-lower.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /speach-lower.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/social-slider.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /social-slider.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scrolltop.png" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+Served asset /scrolltop.png - 304 Not Modified (0ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.ttf" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.ttf"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.ttf" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.ttf"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.svg" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.svg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.svg" for 127.0.0.1 at 2013-01-19 02:59:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.svg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/authentications" for 127.0.0.1 at 2013-01-19 02:59:38 +0200
+  Processing by AuthenticationsController#index as HTML
+Rendered authentications/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2:   <p><strong>You can sign in to this account using:</strong></p>  
+    3:    <div class="authentications">  
+    4:     
+    5: 	    <% @authentications.each do |authentication| %>  
+    6: 		     <div class="authentication">  
+    7: 		      <%= image_tag "#{authentication.provider}_32.png", :size => "32x32" %>  
+    8: 		      <div class="provider"><%= authentication.provider%></div>  
+  app/views/authentications/index.html.erb:5:in `_app_views_authentications_index_html_erb__250251082__619570278'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-19 02:59:45 +0200
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+  Processing by CarsController#index as HTML
+  [1m[36mCar Load (1.7ms)[0m  [1mSELECT "cars".* FROM "cars" [0m
+Rendered cars/index.html.erb within layouts/application (212.1ms)
+Completed 200 OK in 270ms (Views: 262.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/fonts.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /fonts.css - 200 OK (0ms)
+
+
+Started GET "/assets/cars.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /cars.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/media.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /media.css - 200 OK (0ms)
+
+
+Started GET "/assets/prettyPhoto.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /prettyPhoto.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/registrations.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /registrations.css - 200 OK (9ms)
+
+
+Started GET "/assets/transitions.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /transitions.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /twitter.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/web-style.css?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /web-style.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /all.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/cars.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /cars.js - 200 OK (0ms)
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /registrations.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /application.js - 200 OK (9ms)
+
+
+Started GET "/assets/web-style.css" for 127.0.0.1 at 2013-01-19 02:59:50 +0200
+Served asset /web-style.css - 200 OK (0ms)
+
+
+Started GET "/assets/fonts.css" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /fonts.css - 200 OK (0ms)
+
+
+Started GET "/assets/transitions.css" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /transitions.css - 200 OK (0ms)
+
+
+Started GET "/assets/media.css" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /media.css - 200 OK (0ms)
+
+
+Started GET "/assets/twitter.css" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /twitter.css - 200 OK (0ms)
+
+
+Started GET "/assets/prettyPhoto.css" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /prettyPhoto.css - 200 OK (3ms)
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /bg.png - 200 OK (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset  - 404 Not Found (18ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/12345654321" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /12345654321 - 404 Not Found (12ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/12345654321"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/assets/header-bg.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /header-bg.png - 200 OK (0ms)
+
+
+Started GET "/assets/social-slider.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /social-slider.png - 200 OK (0ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.woff" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.woff"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.woff" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.woff"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/footer-bg.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /footer-bg.png - 200 OK (0ms)
+
+
+Started GET "/assets/footer-top.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /footer-top.png - 200 OK (0ms)
+
+
+Started GET "/images/large-twitter.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/large-twitter.png"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/latesttestimonial.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /latesttestimonial.png - 200 OK (0ms)
+
+
+Started GET "/assets/scrolltop.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /scrolltop.png - 200 OK (0ms)
+
+
+Started GET "/assets/speach-lower.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /speach-lower.png - 200 OK (0ms)
+
+
+Started GET "/assets/usefullinks.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /usefullinks.png - 200 OK (0ms)
+
+
+Started GET "/assets/cross.png" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+Served asset /cross.png - 200 OK (0ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.ttf" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.ttf"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.ttf" for 127.0.0.1 at 2013-01-19 02:59:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.ttf"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/helveticaltstd-roman-webfont.svg" for 127.0.0.1 at 2013-01-19 02:59:52 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/helveticaltstd-roman-webfont.svg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/BebasNeue-webfont.svg" for 127.0.0.1 at 2013-01-19 02:59:52 +0200
+
+ActionController::RoutingError (No route matches [GET] "/fonts/BebasNeue-webfont.svg"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2013-01-19 02:59:55 +0200
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2013-01-19 02:59:56 +0200
+
+
+Started GET "/auth/twitter/callback?oauth_token=MX13ekt8BVNkCwUxV0DHvXlu6zVcgDIXJeoz6xm6Ckw&oauth_verifier=tAmL0aUvEySoBoiuB3WSWj453UDgSPFzIcLZI4cUyTE" for 127.0.0.1 at 2013-01-19 03:00:19 +0200
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"MX13ekt8BVNkCwUxV0DHvXlu6zVcgDIXJeoz6xm6Ckw", "oauth_verifier"=>"tAmL0aUvEySoBoiuB3WSWj453UDgSPFzIcLZI4cUyTE", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '158681231' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-01-17 13:31:50.165321', "current_sign_in_at" = '2013-01-19 01:00:22.599136', "sign_in_count" = 4, "updated_at" = '2013-01-19 01:00:22.599914' WHERE "users"."id" = 16
+Redirected to http://localhost:3000/
+Completed 302 Found in 266ms
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2013-01-19 03:00:30 +0200
+
+
+Started GET "/auth/twitter/callback?oauth_token=6AIxFCTaYWVWeV7s3PmLfV4fhnW2E581avW0zR9Xk&oauth_verifier=WUovhjafwMX4d7hQkRmTqV56sSvPVsYWoiPmcrlYLR0" for 127.0.0.1 at 2013-01-19 03:00:32 +0200
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"6AIxFCTaYWVWeV7s3PmLfV4fhnW2E581avW0zR9Xk", "oauth_verifier"=>"WUovhjafwMX4d7hQkRmTqV56sSvPVsYWoiPmcrlYLR0", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT "authentications".* FROM "authentications" WHERE "authentications"."provider" = 'twitter' AND "authentications"."uid" = '158681231' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 16 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 233ms
