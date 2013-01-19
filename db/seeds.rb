@@ -39,10 +39,10 @@ basemobileno = "012201853"
 User.delete_all
 Car.delete_all
 
-1.upto(50) do |n|  
+1.upto(usernames.length) do |n|  
   
-  firstname = usernames[n%usernames.length].split(" ").first
-  lastname = usernames[n%usernames.length].split(" ").second
+  firstname = usernames[n].split(" ").first
+  lastname = usernames[n].split(" ").second
   mobile = basemobileno + (10+n).to_s
   
   User.create :firstname => firstname  , :lastname => lastname  , :mobile => mobile , :thumbnail => userpicture[n] , :pricture => userpicture[n] , :location => "cairo" , :authority => "user" 
@@ -53,8 +53,6 @@ end
 1.upto(100) do |n|
   
   randomComment = (0...50).map{ ('a'..'z').to_a[rand(26)] }.join
-
-  
   Car.create :mark => mark[n%mark.length] , :model => model[n%model.length], :thumbnailurl => carthumbnails[n%carthumbnails.length],:picture => carimages[n%carimages.length], :cc => rand(3000) ,:kmpassed => rand(500000) , :automatic => rand(2) == 1 ,:centerlock => rand(2) == 1 , :powersteering => rand(2) == 1 , :abs => rand(2) == 1 , :electricwindow => rand(2) == 1 ,:airbag => rand(2) == 1  , :user =>  User.all[n%User.all.length], :price => rand(1000000), :comment => randomComment  
 end
 
