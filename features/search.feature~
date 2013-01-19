@@ -1,0 +1,9 @@
+Feature : display cars using specific search criteria 
+
+As a viewer
+so i can quickly view cars i'm interested in 
+I want to search car with specific criteria
+
+Background: cars have been added to database
+
+

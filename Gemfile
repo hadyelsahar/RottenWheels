@@ -5,8 +5,9 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+
+#gem 'pg'
 gem 'devise','2.1.2'
 gem 'omniauth'
 gem 'omniauth-facebook'
@@ -29,6 +30,26 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development, :test do
+  gem 'sqlite3'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'rspec-rails'
+  gem 'webrat'
+  gem 'minitest'
+  gem 'simplecov'
+end
+
+
+
 gem 'jquery-rails'
 
 # Use unicorn as the web server
@@ -44,4 +65,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem "mocha", :group => :test
+
+
