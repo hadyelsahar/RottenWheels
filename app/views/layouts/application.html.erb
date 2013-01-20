@@ -40,6 +40,11 @@
                     <ul>
                         <li><a href="/themes/response/" title="Response Home">Home</a></li>
                         <li><a href="contact-us.html" title="Contact Response">Contact Us</a></li>
+                          <% if current_user %>
+                        <li> 
+                        	<%= link_to 'Sign out', destroy_user_session_path , :method => :delete %>
+                		</li>
+                		<%end%>
                     </ul>
                 </div>
                 <!-- End navigation -->
@@ -54,7 +59,7 @@
         <div id="header_small">
             <!-- Start Logo area -->
             <div id="logo">
-                <%= image_tag "logo.png" , {:alt=>"RottenWheels"} %>
+                <%= link_to image_tag("logo.png",{:class=>"RottenWheels"}) , "/cars" %>
             </div>
             <!-- End Logo area -->
             <!-- Start Social area -->
@@ -62,7 +67,7 @@
             <% if !current_user %>
             <div class="signup">
             <div class="title">Not an existing user?.. <a href = "/users/sign_up" >Sign up</a></div>
-            <div class="title signin">or <a href = ""/users/sign_up >Sign in</a></div>
+            <div class="title signin">or <a href = "/users/sign_in" >Sign in</a></div>
                 <ul>
                     <li><a href="/auth/facebook" class="social-facebook"></a></li>
                     <li><a href="/auth/twitter" class="social-twitter"></a></li>

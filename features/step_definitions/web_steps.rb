@@ -58,6 +58,7 @@ When /^(?:|I )follow "([^"]*)"$/ do |link|
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+ 
   fill_in(field, :with => value)
 end
 
@@ -258,6 +259,7 @@ def path_to(page_name)
 
     when /^the (RottenWheels )?home\s?page$/ then '/cars'
     when /^the cars view page$/ then '/cars'
+    when /^add car page$/ then '/cars/new'  
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

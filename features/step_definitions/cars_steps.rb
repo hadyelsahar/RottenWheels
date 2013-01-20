@@ -88,6 +88,33 @@ end
 
 
 
+#authentication using Devise and Capybara 
+
+Given /^I am not authenticated$/ do
+  if page.has_content?("Sign out")
+  click_link('Sign out') # ensure that at least
+  end 
+end
+ 
+Given /^I am a new, authenticated user$/ do
+  email = "user@email.com"
+  password = "abcedf"
+  firstname = "firstname"
+  lastname = "lastname"
+  mobile = "01223334566"
+
+  User.create! :firstname => firstname , :lastname => lastname , :email => email , :password => password , :mobile => mobile  
+
+  visit '/users/sign_in'
+  fill_in "user_email", :with => email
+  fill_in "user_password", :with => password
+  click_button "Sign in"
+
+end
+
+
+
+
 # Make it easier to express checking or unchecking several boxes at once
 #  "When I uncheck the following ratings: PG, G, R"
 #  "When I check the following ratings: G"

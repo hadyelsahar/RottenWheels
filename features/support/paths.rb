@@ -16,6 +16,7 @@ module NavigationHelpers
     when /^the (RottenWheels )?home\s?page$/ then '/cars'
     when /^the cars view page$/ then '/cars'
 
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
